@@ -11,6 +11,8 @@
     <form id="form1" runat="server">
         <div>
         </div>
+        <asp:Login ID="Login1" runat="server">
+        </asp:Login>
     </form>
 </body>
 </html>
