@@ -3,27 +3,18 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <div class="row">
-         <div  class="col-md-2">
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/logo.gif" Height="100px" />
-          </div>
-            <div>
-        <h1>School Management System
-        </h1>
+        <h1>School Management System</h1>
         <p class="lead">This is a web application for school management system in BUAA.</p>
-        <p class ="col-md-pull-10"><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p> 
-         </div>
-            </div>
+        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
- 
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Official started</h2>
+            <h2>Getting started</h2>
             <p>
                 ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
             A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                u</p>
+            </p>
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
             </p>
