@@ -173,7 +173,6 @@ G:\三上\Data_admin\WebApplication4\WebApplication4\bin\Microsoft.AI.Web.xml
 G:\三上\Data_admin\WebApplication4\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 G:\三上\Data_admin\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Optimization.resources.dll
 G:\三上\Data_admin\WebApplication4\WebApplication4\bin\zh-Hans\Microsoft.AspNet.FriendlyUrls.resources.dll
-G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache
 G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CoreCompileInputs.cache
 G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CopyComplete
 G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll

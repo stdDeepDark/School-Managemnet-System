@@ -11,34 +11,22 @@ namespace WebApplication4
 {
     public partial class Login : System.Web.UI.Page
     {
-        protected TextBox TextBox1;
         public MySqlConnection conn;
         protected void Page_Load(object sender, EventArgs e)
         {
             string myConn_str = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=course_system";
-            conn = new MySqlConnection(myConn_str);
-            TextBox1.Text = "trying";
-            try
-            {
-                conn.Open();
-                TextBox1.Text = "connection succeed";
-            }
-            catch (MySqlException ex)
-            {
-                TextBox1.Text = ex.Message;
-            }
-            finally
-            {
-                conn.Close();
-            }
+            conn = new MySqlConnection(myConn_str);      
         }
 
-        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
-        {
-            string userName = Login1.UserName.ToString().Trim().Replace("'", "").Replace("=", ""); ;
-            string password = Login1.Password.ToString().Trim().Replace("'", "").Replace("=", ""); ;
-            TextBox1.Text = "button clicked, trying to log in";
-            MySqlCommand cmd = new MySqlCommand("login", conn);
+        protected void Button1_Click(object sender, EventArgs e)
+        {      
+            string username = Request["login"].ToString();
+            string password = Request["password"].ToString();
+            MySqlCommand cmd;
+            if (CheckBox1.Checked)
+                cmd = new MySqlCommand("tLogin", conn);
+            else
+                cmd = new MySqlCommand("Login", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("?un", MySqlDbType.VarChar));
             cmd.Parameters.Add(new MySqlParameter("?pw", MySqlDbType.VarChar));
@@ -46,28 +34,28 @@ namespace WebApplication4
             cmd.Parameters["?un"].Direction = ParameterDirection.Input;
             cmd.Parameters["?pw"].Direction = ParameterDirection.Input;
             cmd.Parameters["?result"].Direction = ParameterDirection.Output;
-            cmd.Parameters["?un"].Value = userName;
+            cmd.Parameters["?un"].Value = username;
             cmd.Parameters["?pw"].Value = password;
             try
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                TextBox1.Text = cmd.Parameters["?result"].Value.ToString();
+                int id = Convert.ToInt32(cmd.Parameters["?result"].Value);
+                if (id == 0)
+                     
+                        else
+
+                    Response.Write("<script language='javascript'>window.location='Default.aspx'</script>");
             }
             catch (Exception ex)
             {
-                TextBox1.Text = ex.Message;
+
             }
             finally
             {
                 conn.Close();
             }
-
-        }
-
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            Response.Redirect("Default.aspx");
         }
     }
 }

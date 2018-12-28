@@ -2,12 +2,29 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="jumbotron">
-        <div style ="display:flex; height : 300px; justify-content:center; align-items:center; " >
-        
- 
-                <asp:Login ID="Login1" runat="server" style="margin:auto;" PasswordLabelText="Password:" UserNameLabelText="Username:" LoginButtonText="Sign in" RememberMeText="Remember Me" FailureText="Login failure. Please retry." PasswordRequiredErrorMessage="Password Required" TitleText="Sign in"></asp:Login>
+       
+  
+    <div style="margin:auto;display:flex; justify-content:center; align-items:center;height:100px" >
+      <h1>Sign in to School Management System<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        </h1>
+      </div>
 
-        </div>
-        </div>
+        <label for="login_field"style="margin:auto;display:flex; justify-content:center; align-items:center;height:40px">
+          Username
+        </label>
+        <input style="margin:auto;display:flex; justify-content:center; align-items:center;"type="text" name="login" id="login" class="form-control input-block" tabindex="1"   autofocus="autofocus" />
+
+         <label for="password"style="margin:auto;display:flex; justify-content:center; align-items:center;height:40px">
+          Password
+        </label>
+       <input style="margin:auto;display:flex; justify-content:center; align-items:center;"type="password" name="password" id="password" class="form-control form-control input-block" tabindex="2" />
+       <div style="height:10px">
+           
+           </div>
+    <div style="margin:auto;display:flex; justify-content:center; align-items:center;height:100px">
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign in" BorderColor="#2E6DA4" BackColor="#337AB7" ForeColor="White"  Width="100%" Font-Bold="True" Height="40px" BorderStyle="Double" />
+        </div> 
+    <div style="margin:auto;display:flex; justify-content:center; align-items:center;height:30px">
+     <asp:CheckBox ID="CheckBox1" runat="server" BackColor="#337AB7" ForeColor="White" Text="teacher login" />
+       </div>
 </asp:Content>
