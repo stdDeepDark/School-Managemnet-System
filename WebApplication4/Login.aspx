@@ -1,18 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication4.Login" %>
+﻿<%@ Page Title="Login" Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication4.Login" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+        <div style ="display:flex; height : 300px; justify-content:center; align-items:center; " >
+        
+ 
+                <asp:Login ID="Login1" runat="server" style="margin:auto;" PasswordLabelText="Password:" UserNameLabelText="Username:" LoginButtonText="Sign in" RememberMeText="Remember Me" FailureText="Login failure. Please retry." PasswordRequiredErrorMessage="Password Required" TitleText="Sign in"></asp:Login>
+
         </div>
-        <asp:Login ID="Login1" runat="server">
-        </asp:Login>
-    </form>
-</body>
-</html>
+</asp:Content>

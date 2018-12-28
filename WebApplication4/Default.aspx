@@ -7,25 +7,24 @@
          <div  class="col-md-2">
         <asp:Image ID="Image1" runat="server" ImageUrl="~/logo.gif" Height="100px" />
           </div>
-            <div>
         <h1>School Management System
         </h1>
         <p class="lead">This is a web application for school management system in BUAA.</p>
-        <p class ="col-md-pull-10"><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p> 
+                <div  class="col-md-5">
+                    </div>
+        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p> 
          </div>
-            </div>
+  
     </div>
  
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Official started</h2>
+            <h2>Official Website</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                u</p>
+                Beihang University is designated as an aminent key university by China's Ministry of Education Class A . It was one of China's key universities subsidized by "Project 985" funding and by " Project 211" funding. Beihang was founded on October 25, 1952, with an area of over 100 hectares.</p>
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                <a class="btn btn-default" href="https://www.buaa.edu.cn">Learn more &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
