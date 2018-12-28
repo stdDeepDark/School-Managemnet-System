@@ -10,7 +10,7 @@
 namespace WebApplication4 {
     
     
-    public partial class ViewLesson {
+    public partial class Teacher {
         
         /// <summary>
         /// GridView1 控件。

@@ -21,6 +21,7 @@ namespace WebApplication4
         protected void Session_Start(Object sender, EventArgs e)
         {
             Session["id"]="";
+            Session["role"] = "";
         }
 
 

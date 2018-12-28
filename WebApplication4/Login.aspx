@@ -5,7 +5,7 @@
        
   
     <div style="margin:auto;display:flex; justify-content:center; align-items:center;height:100px" >
-      <h1>Sign in to School Management System<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+      <h1>Sign in to School Management System
         </h1>
       </div>
 
@@ -25,6 +25,6 @@
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign in" BorderColor="#2E6DA4" BackColor="#337AB7" ForeColor="White"  Width="100%" Font-Bold="True" Height="40px" BorderStyle="Double" />
         </div> 
     <div style="margin:auto;display:flex; justify-content:center; align-items:center;height:30px">
-     <asp:CheckBox ID="CheckBox1" runat="server" BackColor="#337AB7" ForeColor="White" Text="teacher login" />
+     <asp:CheckBox ID="CheckBox1" runat="server" BackColor="White" ForeColor="Black" Text="teacher login" />
        </div>
 </asp:Content>

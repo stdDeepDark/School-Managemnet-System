@@ -24,10 +24,17 @@ namespace WebApplication4
             string username = Request["login"].ToString();
             string password = Request["password"].ToString();
             MySqlCommand cmd;
+            string role;
             if (CheckBox1.Checked)
+            {
                 cmd = new MySqlCommand("tLogin", conn);
+                role = "teacher";
+            }
             else
+            {
                 cmd = new MySqlCommand("Login", conn);
+                role = "student";
+            }
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("?un", MySqlDbType.VarChar));
             cmd.Parameters.Add(new MySqlParameter("?pw", MySqlDbType.VarChar));
@@ -42,15 +49,14 @@ namespace WebApplication4
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 int id = Convert.ToInt32(cmd.Parameters["?result"].Value);
-                TextBox1.Text = id.ToString();
                 if (id == 0)
                 {
-                    //Response.Write("<script>alert('登录失败')</script>");
-                    TextBox1.Text= Session["id"].ToString();
+                    Response.Write("<script>alert('Login failure:username or password wrong!')</script>");
                 }
                 else
                 {
                     Session["id"] = id.ToString();
+                    Session["role"] = role;
                     Response.Redirect("Default.aspx");
                 }
             }

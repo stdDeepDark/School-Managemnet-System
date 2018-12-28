@@ -13,20 +13,23 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["id"].ToString() == "")
+                Response.Redirect("Login.aspx");
             get_list();
 
         }
         void get_list()
         {
-            int id = 16211061;
-            string Myconn = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=course_system";
+            int id =Convert.ToInt32(Session["id"]);
+            string Myconn = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=sms";
             MySqlConnection mySql = new MySqlConnection(Myconn);
             mySql.Open();
-            MySqlCommand cmd = new MySqlCommand("Option_Course", mySql);
+            MySqlCommand cmd = new MySqlCommand("getCourseList", mySql);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("?sid", MySqlDbType.Int32)); // type要自己选择
-
+            cmd.Parameters.Add(new MySqlParameter("?result", MySqlDbType.Int32));
+            cmd.Parameters["?sid"].Direction = ParameterDirection.Input;
+            cmd.Parameters["?result"].Direction = ParameterDirection.Output;
             cmd.Parameters["?sid"].Value = id;
             MySqlDataAdapter sqlda = new MySqlDataAdapter(cmd);
 
@@ -34,6 +37,7 @@ namespace WebApplication4
             sqlda.Fill(ds, "Table1");
             GridView1.DataSource = ds.Tables[0];
             GridView1.DataBind();
+           
             mySql.Close();
         }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,14 +49,18 @@ namespace WebApplication4
 
         void choose(int i)
         {
-            int id = 16211061;
-            string Myconn = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=course_system";
+            int id = Convert.ToInt32(Session["id"]);
+            string Myconn = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=sms";
             MySqlConnection mySql = new MySqlConnection(Myconn);
             mySql.Open();
-            MySqlCommand cmd = new MySqlCommand("Select_Course", mySql);
+            MySqlCommand cmd = new MySqlCommand("selectCourse", mySql);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("?sid", MySqlDbType.Int32)); // type要自己选择
             cmd.Parameters.Add(new MySqlParameter("?cid", MySqlDbType.Int32));
+            cmd.Parameters.Add(new MySqlParameter("?result", MySqlDbType.Int32));
+            cmd.Parameters["?sid"].Direction = ParameterDirection.Input;
+            cmd.Parameters["?cid"].Direction = ParameterDirection.Input;
+            cmd.Parameters["?result"].Direction = ParameterDirection.Output;
             cmd.Parameters["?sid"].Value = id;
             cmd.Parameters["?cid"].Value = i;
             cmd.ExecuteNonQuery();

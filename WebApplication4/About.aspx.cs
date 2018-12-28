@@ -13,5 +13,12 @@ namespace WebApplication4
         {
 
         }
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Session["role"].ToString() == "student")
+                this.MasterPageFile = "~/Site_student.Master";
+            else if (Session["role"].ToString() == "teacher")
+                this.MasterPageFile = "~/Site_teacher.Master";
+        }
     }
 }

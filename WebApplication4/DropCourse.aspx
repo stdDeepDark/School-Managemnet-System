@@ -1,21 +1,33 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DropCourse.aspx.cs" Inherits="WebApplication4.DropCourse" %>
+﻿<%@ Page Title="Drop Course"  MasterPageFile="~/Site_student.Master"  Language="C#" AutoEventWireup="true" CodeBehind="DropCourse.aspx.cs" Inherits="WebApplication4.DropCourse" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+       <div style =" height:10px"> 
+        </div>       
+        <div style =" display:flex; justify-content:center; align-items:center; " >
+
+          
+        <h3>Selected Courses
+        </h3>
+            </div>
+    <div  style =" display:flex; justify-content:center; align-items:center; " >
+           
+            <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="500px">
+                <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" SelectText="退选" ShowSelectButton="True" />
+                    <asp:CommandField ButtonType="Button" SelectText="Drop Course" ShowSelectButton="True" />
                 </Columns>
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
         </div>
-    </form>
-</body>
-</html>
+        
+ </asp:Content>

@@ -49,6 +49,7 @@
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -200,6 +201,9 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Teacher.aspx" />
+    <Content Include="teacher_course.aspx" />
+    <Content Include="test_check.aspx" />
     <Content Include="ViewLesson.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -274,6 +278,41 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site_student.Master.cs">
+      <DependentUpon>Site_student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_student.Master.designer.cs">
+      <DependentUpon>Site_student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_teacher.Master.cs">
+      <DependentUpon>Site_teacher.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_teacher.Master.designer.cs">
+      <DependentUpon>Site_teacher.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.aspx.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher.aspx.designer.cs">
+      <DependentUpon>Teacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="teacher_course.aspx.cs">
+      <DependentUpon>teacher_course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="teacher_course.aspx.designer.cs">
+      <DependentUpon>teacher_course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_check.aspx.cs">
+      <DependentUpon>test_check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_check.aspx.designer.cs">
+      <DependentUpon>test_check.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewLesson.aspx.cs">
       <DependentUpon>ViewLesson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -296,6 +335,8 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Site_student.Master" />
+    <Content Include="Site_teacher.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
