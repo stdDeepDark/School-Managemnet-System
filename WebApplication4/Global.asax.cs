@@ -16,6 +16,13 @@ namespace WebApplication4
             // 在应用程序启动时运行的代码
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
         }
+        protected void Session_Start(Object sender, EventArgs e)
+        {
+            Session["id"]="";
+        }
+
+
     }
 }

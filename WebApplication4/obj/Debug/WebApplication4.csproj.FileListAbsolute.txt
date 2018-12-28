@@ -183,3 +183,4 @@ G:\三上\Data_admin\WebApplication4\WebApplication4\bin\Google.Protobuf.dll
 G:\三上\Data_admin\WebApplication4\WebApplication4\bin\MySql.Data.dll
 G:\三上\Data_admin\WebApplication4\WebApplication4\bin\Google.Protobuf.xml
 G:\三上\Data_admin\WebApplication4\WebApplication4\bin\MySql.Data.xml
+G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache

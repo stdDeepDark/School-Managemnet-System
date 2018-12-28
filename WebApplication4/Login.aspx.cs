@@ -11,10 +11,11 @@ namespace WebApplication4
 {
     public partial class Login : System.Web.UI.Page
     {
+        static int id;
         public MySqlConnection conn;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string myConn_str = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=course_system";
+            string myConn_str = "server=120.78.83.103;port=3306;user id=root;password=ItIsNotAPassword;database=sms";
             conn = new MySqlConnection(myConn_str);      
         }
 
@@ -41,11 +42,17 @@ namespace WebApplication4
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 int id = Convert.ToInt32(cmd.Parameters["?result"].Value);
+                TextBox1.Text = id.ToString();
                 if (id == 0)
-                     
-                        else
-
-                    Response.Write("<script language='javascript'>window.location='Default.aspx'</script>");
+                {
+                    //Response.Write("<script>alert('登录失败')</script>");
+                    TextBox1.Text= Session["id"].ToString();
+                }
+                else
+                {
+                    Session["id"] = id.ToString();
+                    Response.Redirect("Default.aspx");
+                }
             }
             catch (Exception ex)
             {
@@ -55,7 +62,6 @@ namespace WebApplication4
             {
                 conn.Close();
             }
-            Response.Redirect("Default.aspx");
         }
     }
 }
