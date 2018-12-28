@@ -180,3 +180,7 @@ G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.d
 G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
 G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Properties.Resources.resources
 G:\三上\Data_admin\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.GenerateResource.cache
+G:\三上\Data_admin\WebApplication4\WebApplication4\bin\Google.Protobuf.dll
+G:\三上\Data_admin\WebApplication4\WebApplication4\bin\MySql.Data.dll
+G:\三上\Data_admin\WebApplication4\WebApplication4\bin\Google.Protobuf.xml
+G:\三上\Data_admin\WebApplication4\WebApplication4\bin\MySql.Data.xml

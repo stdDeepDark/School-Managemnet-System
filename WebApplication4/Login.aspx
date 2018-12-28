@@ -2,10 +2,12 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="jumbotron">
         <div style ="display:flex; height : 300px; justify-content:center; align-items:center; " >
         
  
                 <asp:Login ID="Login1" runat="server" style="margin:auto;" PasswordLabelText="Password:" UserNameLabelText="Username:" LoginButtonText="Sign in" RememberMeText="Remember Me" FailureText="Login failure. Please retry." PasswordRequiredErrorMessage="Password Required" TitleText="Sign in"></asp:Login>
 
+        </div>
         </div>
 </asp:Content>
